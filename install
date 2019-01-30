@@ -149,7 +149,7 @@ pushd "$working_directory"
   log "Downloading NixOS $iso"
   mkdir -p mnt host/nix
 
-  url=https://d3g5gsiof5omrk.cloudfront.net/nixos/$primary_version/nixos-$full_version
+  url=https://hydra.nixos.org/build/88140998/download/1/$iso
   wget -c $url/$iso
 
   # From $url/$iso.sha256
