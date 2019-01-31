@@ -149,11 +149,7 @@ pushd "$working_directory"
   log "Downloading NixOS $iso"
   mkdir -p mnt host/nix
 
-  url=https://hydra.nixos.org/build/88140998/download/1
-  echo "original"
-  echo "https://hydra.nixos.org/build/88141019/download/1/nixos-minimal-18.09.2061.bc739d01ccb-x86_64-linux.iso"
-  echo "from script"
-  echo "$url/$iso"
+  url=https://hydra.nixos.org/build/88141019/download/1
 
   wget -c $url/$iso
 
