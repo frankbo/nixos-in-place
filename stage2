@@ -42,7 +42,7 @@ cp /etc/external-resolv.conf /etc/resolv.conf
 
 ## Install dependencies; it's easier to do this here, in the Nix chroot,
 ## since we don't rely on the host system.
-nix-env -f "<nixpkgs>" -iA pcre
+nix-env -i pcre
 
 ## Generate a base config
 nixos-generate-config --root /nixos
