@@ -42,11 +42,7 @@ cp /etc/external-resolv.conf /etc/resolv.conf
 
 ## Install dependencies; it's easier to do this here, in the Nix chroot,
 ## since we don't rely on the host system.
-echo "Searching in nixpkgs"
-echo "--------------------------"
-nix search pcre
-echo "--------------------------"
-nix-env -i pcre
+nix-env -f "<nixpkgs>" -iA pcre
 
 ## Generate a base config
 nixos-generate-config --root /nixos
