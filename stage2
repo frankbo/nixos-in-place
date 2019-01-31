@@ -8,6 +8,10 @@ grub_device=$3
 digitalocean=$4
 digitalocean_configs=""
 
+## Disable sandbox
+mkdir -p /env/nix/
+cat "sandbox = false;" >> nix.conf
+
 if [ "$digitalocean" = "true" ];
 then
   digitalocean_configs="
